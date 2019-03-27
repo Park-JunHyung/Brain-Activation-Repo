@@ -1,7 +1,11 @@
 package programmers;
 
-import java.util.HashMap;
+/*
+- find participant who can't complete race 'Efficiently'
+- participants can duplicated
+*/
 
+import java.util.HashMap;
 public class hash01 {
     public static void main(String[] args) {
         String[] participant = {"leo", "kiki", "eden","leo"};
