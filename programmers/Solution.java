@@ -19,6 +19,10 @@ public class Solution {
 
         System.out.println("Hash02 testcase 1");
         String[] phone_book = {"119", "97674223", "1195524421"};
+//        System.out.println(hash02.solution(phone_book));
+
+        System.out.println("Hash02 testcase 1");
+        phone_book = new String[]{"12223232", "12", "22222222"};
         System.out.println(hash02.solution(phone_book));
     }
 }

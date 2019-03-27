@@ -1,9 +1,9 @@
 package programmers;
 
 /*
-- find participant who can't complete race 'Efficiently'
-- participants can duplicated
-*/
+* - find participant who can't complete race 'Efficiently'
+* - participants can duplicated
+* */
 
 import java.util.HashMap;
 public class hash01 {
