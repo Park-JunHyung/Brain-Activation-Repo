@@ -6,6 +6,22 @@ public class Solution {
 //        runHash01();
 //        runHash02();
         runHash03();
+//        int data[]={1,2,3,4};
+//        powerset(data,4);
+    }
+
+    private static void powerset(int[] data, int n) {
+        int i,j;
+        int max = 1<<n;
+        for(i=0;i<max;i++){
+            System.out.print("{");
+            for(j=0;j<n;j++){
+                int tmp=i&(1<<j);
+                if(tmp!=0)
+                    System.out.printf("%d ",data[j]);
+            }
+            System.out.println("}");
+        }
     }
 
     private static void runHash01() {

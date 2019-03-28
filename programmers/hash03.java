@@ -12,45 +12,40 @@ public class hash03 {
     public int solution(String[][] clothes) {
         int answer = 0;
 
-        ArrayList<String> list = new ArrayList<>();
-        HashMap<String, Integer> map = new HashMap<>();
-        int n;
-        boolean[] include;
+        ArrayList<String> clothList = new ArrayList<>();
+        ArrayList<Integer> sumList = new ArrayList<>();
+        HashMap<String, Integer> clothMap = new HashMap<>();
 
         for (String[] c : clothes) {
-            if (map.containsKey(c[1])) {
-                map.put(c[1], map.get(c[1]) + 1);
+            if (clothMap.containsKey(c[1])) {
+                clothMap.put(c[1], clothMap.get(c[1]) + 1);
             } else {
-                map.put(c[1], 1);
-                list.add(c[1]);
+                clothMap.put(c[1], 1);
+                clothList.add(c[1]);
             }
         }
-        n = map.size();
-        include = new boolean[n];
-        answer = powerSet(0, include, map, list, n);
-        return answer;
-    }
 
-    public int powerSet(int k, boolean[] include, HashMap<String, Integer> map, ArrayList<String> list, int n) {
-        int x = 1;
-        boolean isInclude = false;
-        if (k == n) {
-            for (int i = 0; i < n; i++) {
-                if (include[i]) {
-                    isInclude = true;
-                    x *= map.get(list.get(i));
+        int i, j,count=0,value=1;
+        int max = 1 << clothList.size();
+        for (i = 0; i < max; i++) {
+            for (j = 0; j < clothMap.size(); j++) {
+                int tmp = i & (1 << j);
+                if (tmp != 0){
+                    count++;
+                    value*=clothMap.get(clothList.get(j));
+                    System.out.println(clothList.get(j)+value+" ");
                 }
             }
-            if (!isInclude)
-                x = 0;
-            return x;
+            if (count==0)
+                value=0;
+            sumList.add(count,value);
+            count=0;
+            value=1;
         }
-        if (!isInclude)
-            x = 0;
-        include[k] = false;
-        x += powerSet(k + 1, include, map, list, n);
-        include[k] = true;
-        x += powerSet(k + 1, include, map, list, n);
-        return x;
+        for (int x=0;x<sumList.size();x++){
+            answer+=sumList.get(x);
+        }
+
+        return answer;
     }
 }
