@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class hash03 {
     public int solution(String[][] clothes) {
-        int answer = 0;
+        int answer = 1;
 
         ArrayList<String> clothList = new ArrayList<>();
-        ArrayList<Integer> sumList = new ArrayList<>();
         HashMap<String, Integer> clothMap = new HashMap<>();
 
         for (String[] c : clothes) {
@@ -25,27 +24,9 @@ public class hash03 {
             }
         }
 
-        int i, j,count=0,value=1;
-        int max = 1 << clothList.size();
-        for (i = 0; i < max; i++) {
-            for (j = 0; j < clothMap.size(); j++) {
-                int tmp = i & (1 << j);
-                if (tmp != 0){
-                    count++;
-                    value*=clothMap.get(clothList.get(j));
-                    System.out.println(clothList.get(j)+value+" ");
-                }
-            }
-            if (count==0)
-                value=0;
-            sumList.add(count,value);
-            count=0;
-            value=1;
+        for (String cloth : clothList) {
+            answer *= (clothMap.get(cloth) + 1);
         }
-        for (int x=0;x<sumList.size();x++){
-            answer+=sumList.get(x);
-        }
-
-        return answer;
+        return answer-1;
     }
 }
