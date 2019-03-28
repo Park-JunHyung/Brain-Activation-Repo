@@ -5,8 +5,10 @@ public class Solution {
 
 //        runHash01();
 //        runHash02();
-        runHash03();
+//        runHash03();
+        runHash04();
     }
+
 
 //    private static void powerset(int[] data, int n) {
 //        int i,j;
@@ -46,15 +48,25 @@ public class Solution {
     private static void runHash03() {
         hash03 hash03 = new hash03();
 
-        System.out.println("Hash02 testcase 1");
+        System.out.println("Hash03 testcase 1");
         String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
         System.out.println(hash03.solution(clothes));
 
 
-        System.out.println("Hash02 testcase 2");
+        System.out.println("Hash03 testcase 2");
         String[][] clothes2 = {{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}};
         System.out.println(hash03.solution(clothes2));
 
+    }
+
+
+    private static void runHash04() {
+        hash04 hash04=new hash04();
+
+        System.out.println("Hash04 testcase 2");
+        String[] genre={"classic", "pop", "classic", "classic", "pop"};
+        int[] plays={500, 600, 150, 800, 2500};
+        System.out.println(hash04.solution(genre,plays));
     }
 
 }
