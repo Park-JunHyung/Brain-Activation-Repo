@@ -65,7 +65,7 @@ public class Solution {
 
         System.out.println("Hash04 testcase 2");
         String[] genre={"classic", "pop", "classic", "classic", "pop"};
-        int[] plays={500, 600, 150, 800, 2500};
+        int[] plays={800, 600, 150, 800, 2500};
         System.out.println(hash04.solution(genre,plays));
     }
 
