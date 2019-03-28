@@ -1,6 +1,6 @@
 package programmers;
 
-/*
+/* [Unfinished Player]
 * - find participant who can't complete race 'Efficiently'
 * - participants can duplicated
 * */

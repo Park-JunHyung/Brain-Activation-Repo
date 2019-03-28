@@ -1,6 +1,6 @@
 package programmers;
 
-/*
+/* [Phone Number List]
  * - Return false when some phoneNo locates as a prefix to others
  * - else return true
  * */
