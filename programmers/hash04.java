@@ -11,7 +11,7 @@ import java.util.*;
 public class hash04 {
     public int[] solution(String[] genres, int[] plays) {
         int[] answer;
-
+        // nice solution
         HashMap<String, HashMap<Integer, Integer>> albumMap = new HashMap<>();
         HashMap<Integer, Integer> mapInMap;
         HashMap<String, Integer> albumTotalMap = new HashMap<>();
