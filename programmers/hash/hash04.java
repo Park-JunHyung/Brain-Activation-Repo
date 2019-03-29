@@ -1,4 +1,4 @@
-package programmers;
+package programmers.hash;
 /* Best Album
  * - Return song id list that is satisfied below conditions
  * - - The genre that played many times locates first

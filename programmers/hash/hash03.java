@@ -1,4 +1,4 @@
-package programmers;
+package programmers.hash;
 
 /* [Camouflage]
  * Calculate how much each different clothes can combine another clothes

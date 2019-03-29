@@ -1,4 +1,4 @@
-package programmers;
+package programmers.hash;
 
 /* [Unfinished Player]
 * - find participant who can't complete race 'Efficiently'
