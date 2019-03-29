@@ -1,7 +1,6 @@
 package programmers.stackQueue;
 
 import java.util.Stack;
-import java.util.StringTokenizer;
 
 public class stackQueue01 {
     public int solution(String arrangement) {
