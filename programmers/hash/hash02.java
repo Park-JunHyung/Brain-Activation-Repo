@@ -1,4 +1,4 @@
-package programmers;
+package programmers.hash;
 
 /* [Phone Number List]
  * - Return false when some phoneNo locates as a prefix to others
@@ -8,7 +8,7 @@ package programmers;
 
 import java.util.HashSet;
 
-class hash02 {
+public class hash02 {
     public boolean solution(String[] phone_book) {
         long before = System.currentTimeMillis();
 

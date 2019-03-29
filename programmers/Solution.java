@@ -1,12 +1,24 @@
 package programmers;
 
+import programmers.hash.*;
+import programmers.stackQueue.stackQueue01;
+
 public class Solution {
     public static void main(String[] args) {
 
 //        runHash01();
 //        runHash02();
 //        runHash03();
-        runHash04();
+//        runHash04();
+        runStackQueue();
+    }
+
+    private static void runStackQueue() {
+        stackQueue01 stackQueue01=new stackQueue01();
+        String arrangement= "()(((()())(())()))(())";
+
+        System.out.println("StackQueue testcase 1");
+        System.out.println(stackQueue01.solution(arrangement));
     }
 
 
