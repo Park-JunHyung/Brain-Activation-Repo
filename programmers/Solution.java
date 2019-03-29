@@ -1,7 +1,7 @@
 package programmers;
 
 import programmers.hash.*;
-import programmers.stackQueue.stackQueue01;
+import programmers.stackQueue.*;
 
 public class Solution {
     public static void main(String[] args) {
@@ -10,7 +10,18 @@ public class Solution {
 //        runHash02();
 //        runHash03();
 //        runHash04();
-        runStackQueue();
+//        runStackQueue();
+        runStackQueue2();
+    }
+
+    private static void runStackQueue2() {
+        stackQueue02 stackQueue02=new stackQueue02();
+
+        int bridge_length=2;
+        int weight=10;
+        int [] truck_weight={7,4,5,6};
+        System.out.println("StackQueue testcase2");
+        System.out.println(stackQueue02.solution(bridge_length,weight,truck_weight));
     }
 
     private static void runStackQueue() {
