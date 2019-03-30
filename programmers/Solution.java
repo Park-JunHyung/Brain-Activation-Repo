@@ -13,6 +13,7 @@ public class Solution {
 //        runStackQueue();
 //        runStackQueue2();
         runStackQueue3();
+
     }
 
     private static void runStackQueue3() {
@@ -22,6 +23,12 @@ public class Solution {
         int location=2;
         System.out.println("StackQueue03 testcase1");
         System.out.println(stackQueue03.solution(priorities,location));
+
+
+        int[] priorities2={1, 1, 9, 1, 1, 1};
+        int location2=0;
+        System.out.println("StackQueue03 testcase2");
+        System.out.println(stackQueue03.solution(priorities2,location2));
     }
 
     private static void runStackQueue2() {
