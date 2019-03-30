@@ -11,7 +11,17 @@ public class Solution {
 //        runHash03();
 //        runHash04();
 //        runStackQueue();
-        runStackQueue2();
+//        runStackQueue2();
+        runStackQueue3();
+    }
+
+    private static void runStackQueue3() {
+        stackQueue03 stackQueue03=new stackQueue03();
+
+        int[] priorities={2,1,3,2};
+        int location=2;
+        System.out.println("StackQueue03 testcase1");
+        System.out.println(stackQueue03.solution(priorities,location));
     }
 
     private static void runStackQueue2() {
@@ -20,7 +30,7 @@ public class Solution {
         int bridge_length=2;
         int weight=10;
         int [] truck_weight={7,4,5,6};
-        System.out.println("StackQueue testcase2");
+        System.out.println("StackQueue02 testcase1");
         System.out.println(stackQueue02.solution(bridge_length,weight,truck_weight));
     }
 
@@ -28,7 +38,7 @@ public class Solution {
         stackQueue01 stackQueue01=new stackQueue01();
         String arrangement= "()(((()())(())()))(())";
 
-        System.out.println("StackQueue testcase 1");
+        System.out.println("StackQueue01 testcase 1");
         System.out.println(stackQueue01.solution(arrangement));
     }
 
