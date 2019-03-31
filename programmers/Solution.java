@@ -12,38 +12,47 @@ public class Solution {
 //        runHash04();
 //        runStackQueue();
 //        runStackQueue2();
-        runStackQueue3();
+//        runStackQueue3();
+        runStackQueue4();
 
+    }
+
+    private static void runStackQueue4() {
+        stackQueue04 stackQueue04 = new stackQueue04();
+        int[] progresses = {93, 30, 55};
+        int[] speeds = {1, 30, 5};
+        System.out.println("StackQueue04 testcase1");
+        System.out.println(stackQueue04.solution(progresses, speeds));
     }
 
     private static void runStackQueue3() {
-        stackQueue03 stackQueue03=new stackQueue03();
+        stackQueue03 stackQueue03 = new stackQueue03();
 
-        int[] priorities={2,1,3,2};
-        int location=2;
+        int[] priorities = {2, 1, 3, 2};
+        int location = 2;
         System.out.println("StackQueue03 testcase1");
-        System.out.println(stackQueue03.solution(priorities,location));
+        System.out.println(stackQueue03.solution(priorities, location));
 
 
-        int[] priorities2={1, 1, 9, 1, 1, 1};
-        int location2=0;
+        int[] priorities2 = {1, 1, 9, 1, 1, 1};
+        int location2 = 0;
         System.out.println("StackQueue03 testcase2");
-        System.out.println(stackQueue03.solution(priorities2,location2));
+        System.out.println(stackQueue03.solution(priorities2, location2));
     }
 
     private static void runStackQueue2() {
-        stackQueue02 stackQueue02=new stackQueue02();
+        stackQueue02 stackQueue02 = new stackQueue02();
 
-        int bridge_length=2;
-        int weight=10;
-        int [] truck_weight={7,4,5,6};
+        int bridge_length = 2;
+        int weight = 10;
+        int[] truck_weight = {7, 4, 5, 6};
         System.out.println("StackQueue02 testcase1");
-        System.out.println(stackQueue02.solution(bridge_length,weight,truck_weight));
+        System.out.println(stackQueue02.solution(bridge_length, weight, truck_weight));
     }
 
     private static void runStackQueue() {
-        stackQueue01 stackQueue01=new stackQueue01();
-        String arrangement= "()(((()())(())()))(())";
+        stackQueue01 stackQueue01 = new stackQueue01();
+        String arrangement = "()(((()())(())()))(())";
 
         System.out.println("StackQueue01 testcase 1");
         System.out.println(stackQueue01.solution(arrangement));
@@ -101,12 +110,12 @@ public class Solution {
 
 
     private static void runHash04() {
-        hash04 hash04=new hash04();
+        hash04 hash04 = new hash04();
 
         System.out.println("Hash04 testcase 2");
-        String[] genre={"classic", "pop", "classic", "classic", "pop"};
-        int[] plays={800, 600, 150, 800, 2500};
-        System.out.println(hash04.solution(genre,plays));
+        String[] genre = {"classic", "pop", "classic", "classic", "pop"};
+        int[] plays = {800, 600, 150, 800, 2500};
+        System.out.println(hash04.solution(genre, plays));
     }
 
 }
