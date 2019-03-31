@@ -22,7 +22,17 @@ public class Solution {
         int[] progresses = {93, 30, 55};
         int[] speeds = {1, 30, 5};
         System.out.println("StackQueue04 testcase1");
-        System.out.println(stackQueue04.solution(progresses, speeds));
+//        System.out.println(stackQueue04.solution(progresses, speeds));
+
+        int[] progresses2 = {40, 93, 30, 55, 60, 65};
+        int[] speeds2 = {60, 1, 30, 5 , 10, 7};
+        System.out.println("StackQueue04 testcase2");
+        System.out.println(stackQueue04.solution(progresses2, speeds2));
+
+        int[] progresses3 = {93, 30, 55, 60, 40, 65};
+        int[] speeds3 = {1, 30, 5 , 10, 60, 7};
+        System.out.println("StackQueue04 testcase3");
+        System.out.println(stackQueue04.solution(progresses3, speeds3));
     }
 
     private static void runStackQueue3() {
