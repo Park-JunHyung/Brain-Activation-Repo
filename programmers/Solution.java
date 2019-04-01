@@ -2,20 +2,26 @@ package programmers;
 
 import programmers.hash.*;
 import programmers.stackQueue.*;
+import programmers.heap.*;
 
 public class Solution {
     public static void main(String[] args) {
 
-//        runHash01();
-//        runHash02();
-//        runHash03();
-//        runHash04();
-//        runStackQueue();
-//        runStackQueue2();
-//        runStackQueue3();
-//        runStackQueue4();
-        runStackQueue5();
+        runHeap1();
 
+    }
+
+    private static void runHeap1() {
+        heap01 heap01=new heap01();
+        int [] scoville= {1, 2, 3, 9, 10, 12};
+        int K=7;
+        System.out.println("Heap01 testcase1");
+//        System.out.println(heap01.solution(scoville,K));
+
+        int [] scoville2= {1, 2, 3, 9, 10, 12};
+        int K2=1100;
+        System.out.println("Heap01 testcase2");
+        System.out.println(heap01.solution(scoville2,K2));
     }
 
     private static void runStackQueue5() {
