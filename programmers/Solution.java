@@ -13,7 +13,16 @@ public class Solution {
 //        runStackQueue();
 //        runStackQueue2();
 //        runStackQueue3();
-        runStackQueue4();
+//        runStackQueue4();
+        runStackQueue5();
+
+    }
+
+    private static void runStackQueue5() {
+        stackQueue05 stackQueue05=new stackQueue05();
+        int[] heights={6,9,5,7,4};
+        System.out.println("StackQueue05 testcase1");
+        System.out.println(stackQueue05.solution(heights));
 
     }
 
