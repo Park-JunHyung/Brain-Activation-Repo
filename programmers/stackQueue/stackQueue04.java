@@ -8,6 +8,7 @@ public class stackQueue04 {
 
         Stack progressStack = new Stack();
         ArrayList finishList = new ArrayList();
+        int arrayLength=speeds.length;
 
         for (int i = progresses.length - 1; i >= 0; i--)
             progressStack.push(progresses[i]);
@@ -32,17 +33,16 @@ public class stackQueue04 {
             for (int i=0;i<size;i++){
                 int curVal= (int) progressStack.get(i);
                 if (curVal<100)
-                    curVal+=speeds[size-i-1];
+                    curVal+=speeds[arrayLength-i-1];
                 progressStack.set(i,curVal);
             }
         }
-        System.out.println();
         int[] answer = new int[finishList.size()];
 
         for (int i=0;i<answer.length;i++){
             answer[i]= (int) finishList.get(i);
-            System.out.print(answer[i]+", ");
         }
+
         return answer;
     }
 }
