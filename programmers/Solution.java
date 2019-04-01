@@ -6,8 +6,26 @@ import programmers.heap.*;
 
 public class Solution {
     public static void main(String[] args) {
+//        runHeap1();
+        runHeap2();
+    }
 
-        runHeap1();
+    private static void runHeap2() {
+        heap02 heap02=new heap02();
+        int stock=60;
+        int [] dates= {4,10,15};
+        int [] supplies={20,5,10};
+        int k=30;
+        System.out.println("Heap02 testcase1");
+        System.out.println(heap02.solution(stock,dates,supplies,k));
+
+        int stock2=4;
+        int [] dates2= {1,2,3,4};
+        int [] supplies2={10,40,30,20};
+        int k2=100;
+        System.out.println("Heap02 testcase2");
+        System.out.println(heap02.solution(stock2,dates2,supplies2,k2));
+
 
     }
 
