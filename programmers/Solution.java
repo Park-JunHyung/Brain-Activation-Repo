@@ -12,7 +12,7 @@ public class Solution {
 
     private static void runHeap2() {
         heap02 heap02=new heap02();
-        int stock=60;
+        int stock=4;
         int [] dates= {4,10,15};
         int [] supplies={20,5,10};
         int k=30;
