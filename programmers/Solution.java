@@ -3,11 +3,22 @@ package programmers;
 import programmers.hash.*;
 import programmers.stackQueue.*;
 import programmers.heap.*;
+import programmers.sorting.*;
 
 public class Solution {
     public static void main(String[] args) {
 //        runHeap1();
-        runHeap2();
+//        runHeap2();
+        runSorting1();
+    }
+
+    private static void runSorting1() {
+        sorting01 sorting01=new sorting01();
+
+        int [] array={1, 5, 2, 6, 3, 7, 4};
+        int [][] command={{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+        System.out.println("Sorting01 testcase1");
+        System.out.println(sorting01.solution(array,command));
     }
 
     private static void runHeap2() {
