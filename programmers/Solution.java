@@ -9,7 +9,15 @@ public class Solution {
     public static void main(String[] args) {
 //        runHeap1();
 //        runHeap2();
-        runSorting1();
+//        runSorting1();
+        runSorting2();
+    }
+
+    private static void runSorting2() {
+        sorting02 sorting02=new sorting02();
+        int [] numbers={3, 30, 34, 5, 9};
+        System.out.println("Sorting02 testcase1");
+        System.out.println(sorting02.solution(numbers));
     }
 
     private static void runSorting1() {
