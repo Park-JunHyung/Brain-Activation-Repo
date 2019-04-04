@@ -1,36 +1,36 @@
 package programmers.sorting;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 public class sorting02 {
     public String solution(int[] numbers) {
         String answer = "";
-        ArrayList list=new ArrayList();
-        ArrayList firstNumberList=new ArrayList();
-        ArrayList digitNumberList=new ArrayList();
-        for (int i=0;i<numbers.length;i++){
-            list.add(numbers[i]);
-            int digitNumber = 1;
-            int target= numbers[i];
-            while (target>=10){
-                target/=10;
-                digitNumber++;
-            }
-            int firstNumber=target;
-            firstNumberList.add(firstNumber);
-            digitNumberList.add(digitNumber);
-        }
-        while (!list.isEmpty()){
-            int bigNumber=0;
-            int bigNumberDigit=4;
-            for (int i=0;i<list.size();i++){
-                int targetFirstNumber= (int) firstNumberList.get(i);
-                int targetDigitNumber= (int) digitNumberList.get(i);
-                if (bigNumber<=targetFirstNumber&&bigNumberDigit>=targetDigitNumber){
-                    b
-                }
 
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int[] compareArray = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            String target = String.valueOf(numbers[i]);
+            while (target.length() <= 4) {
+                target += target;
             }
+            compareArray[i] = Integer.parseInt(target.substring(0, 4));
+            map.put(i, compareArray[i]);
+        }
+        Arrays.sort(compareArray);
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            for (Integer k:map.keySet()){
+                if (map.get(k)==compareArray[i]){
+                    answer += String.valueOf(numbers[k]);
+                    map.remove(k);
+                    break;
+                }
+            }
+        }
+        while (true){
+            if (answer.charAt(0)!='0'||answer.length()==1)
+                break;
+            answer=answer.substring(1);
         }
 
         return answer;

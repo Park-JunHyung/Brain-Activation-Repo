@@ -15,9 +15,12 @@ public class Solution {
 
     private static void runSorting2() {
         sorting02 sorting02=new sorting02();
-        int [] numbers={3, 30, 34, 5, 9};
+        int [] numbers={12,121};
         System.out.println("Sorting02 testcase1");
         System.out.println(sorting02.solution(numbers));
+        int [] numbers2={2,22};
+        System.out.println("Sorting02 testcase1");
+        System.out.println(sorting02.solution(numbers2));
     }
 
     private static void runSorting1() {
