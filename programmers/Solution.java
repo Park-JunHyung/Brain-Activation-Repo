@@ -18,7 +18,7 @@ public class Solution {
         int [] numbers={12,121};
         System.out.println("Sorting02 testcase1");
         System.out.println(sorting02.solution(numbers));
-        int [] numbers2={2,22};
+        int [] numbers2={0,22};
         System.out.println("Sorting02 testcase1");
         System.out.println(sorting02.solution(numbers2));
     }
