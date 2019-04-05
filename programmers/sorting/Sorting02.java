@@ -3,7 +3,7 @@ package programmers.sorting;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class sorting02 {
+public class Sorting02 {
     public String solution(int[] numbers) {
         String answer = "";
 

@@ -6,7 +6,7 @@ package programmers.hash;
 * */
 
 import java.util.HashMap;
-public class hash01 {
+public class Hash01 {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
 

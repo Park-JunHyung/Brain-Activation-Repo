@@ -5,7 +5,7 @@ import java.util.Arrays;
 /*
  * H-Index problem
  * */
-public class sorting03 {
+public class Sorting03 {
     public int solution(int[] citations) {
         int answer = 0;
         int length = citations.length;

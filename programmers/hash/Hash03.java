@@ -8,7 +8,7 @@ package programmers.hash;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class hash03 {
+public class Hash03 {
     public int solution(String[][] clothes) {
         int answer = 1;
 

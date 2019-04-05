@@ -8,7 +8,7 @@ package programmers.hash;
 
 import java.util.*;
 
-public class hash04 {
+public class Hash04 {
     public int[] solution(String[] genres, int[] plays) {
         int[] answer;
         // nice solution

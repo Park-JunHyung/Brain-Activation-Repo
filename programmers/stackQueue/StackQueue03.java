@@ -2,7 +2,7 @@ package programmers.stackQueue;
 
 import java.util.LinkedList;
 
-public class stackQueue03 {
+public class StackQueue03 {
     public int solution(int[] priorities, int location) {
         int answer = 0;
 

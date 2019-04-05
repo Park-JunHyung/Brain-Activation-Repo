@@ -2,7 +2,7 @@ package programmers.stackQueue;
 
 import java.util.Stack;
 
-public class stackQueue01 {
+public class StackQueue01 {
     public int solution(String arrangement) {
         int answer = 0;
 

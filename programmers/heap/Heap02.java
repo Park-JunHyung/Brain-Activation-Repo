@@ -3,7 +3,7 @@ package programmers.heap;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class heap02 {
+public class Heap02 {
     public int solution(int stock, int[] dates, int[] supplies, int k) {
         PriorityQueue<Integer> pqSupplies = new PriorityQueue<>(new Comparator<Integer>() {
 

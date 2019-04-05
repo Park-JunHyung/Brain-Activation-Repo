@@ -2,7 +2,7 @@ package programmers.sorting;
 
 import java.util.Arrays;
 
-public class sorting01 {
+public class Sorting01 {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         for (int i = 0; i < commands.length; i++) {

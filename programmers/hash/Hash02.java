@@ -8,7 +8,7 @@ package programmers.hash;
 
 import java.util.HashSet;
 
-public class hash02 {
+public class Hash02 {
     public boolean solution(String[] phone_book) {
         long before = System.currentTimeMillis();
 

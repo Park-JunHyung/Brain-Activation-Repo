@@ -2,7 +2,7 @@ package programmers.stackQueue;
 
 import java.util.*;
 
-public class stackQueue02 {
+public class StackQueue02 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
 

@@ -3,7 +3,7 @@ package programmers.stackQueue;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class stackQueue05 {
+public class StackQueue05 {
     public int[] solution(int[] heights) {
 
         ArrayList receivedList=new ArrayList();

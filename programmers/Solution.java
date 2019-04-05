@@ -4,25 +4,30 @@ import programmers.hash.*;
 import programmers.stackQueue.*;
 import programmers.heap.*;
 import programmers.sorting.*;
+import programmers.fullSearch.*;
 
 public class Solution {
     public static void main(String[] args) {
-//        runHeap1();
-//        runHeap2();
-//        runSorting1();
-//        runSorting2();
-        runSorting3();
+        runFullSearch1();
+    }
+
+    private static void runFullSearch1() {
+        FullSearch01 fullSearch01=new FullSearch01();
+        int[] answers={};
+        System.out.println("Full Search01 testcase1");
+        System.out.println(fullSearch01.solution(answers));
     }
 
     private static void runSorting3() {
-        sorting03 sorting03=new sorting03();
+        Sorting03 sorting03=new Sorting03();
         int[] citation={22,42};
+
         System.out.println("Sorting03 testcase1");
         System.out.println(sorting03.solution(citation));
     }
 
     private static void runSorting2() {
-        sorting02 sorting02=new sorting02();
+        Sorting02 sorting02=new Sorting02();
         int [] numbers={12,121};
         System.out.println("Sorting02 testcase1");
         System.out.println(sorting02.solution(numbers));
@@ -32,7 +37,7 @@ public class Solution {
     }
 
     private static void runSorting1() {
-        sorting01 sorting01=new sorting01();
+        Sorting01 sorting01=new Sorting01();
 
         int [] array={1, 5, 2, 6, 3, 7, 4};
         int [][] command={{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
@@ -41,7 +46,7 @@ public class Solution {
     }
 
     private static void runHeap2() {
-        heap02 heap02=new heap02();
+        Heap02 heap02=new Heap02();
         int stock=4;
         int [] dates= {4,10,15};
         int [] supplies={20,5,10};
@@ -60,11 +65,11 @@ public class Solution {
     }
 
     private static void runHeap1() {
-        heap01 heap01=new heap01();
+        Heap01 heap01=new Heap01();
         int [] scoville= {1, 2, 3, 9, 10, 12};
         int K=7;
         System.out.println("Heap01 testcase1");
-//        System.out.println(heap01.solution(scoville,K));
+//        System.out.println(Heap01.solution(scoville,K));
 
         int [] scoville2= {1, 2, 3, 9, 10, 12};
         int K2=1100;
@@ -73,7 +78,7 @@ public class Solution {
     }
 
     private static void runStackQueue5() {
-        stackQueue05 stackQueue05=new stackQueue05();
+        StackQueue05 stackQueue05=new StackQueue05();
         int[] heights={6,9,5,7,4};
         System.out.println("StackQueue05 testcase1");
         System.out.println(stackQueue05.solution(heights));
@@ -81,11 +86,11 @@ public class Solution {
     }
 
     private static void runStackQueue4() {
-        stackQueue04 stackQueue04 = new stackQueue04();
+        StackQueue04 stackQueue04 = new StackQueue04();
         int[] progresses = {93, 30, 55};
         int[] speeds = {1, 30, 5};
         System.out.println("StackQueue04 testcase1");
-//        System.out.println(stackQueue04.solution(progresses, speeds));
+//        System.out.println(StackQueue04.solution(progresses, speeds));
 
         int[] progresses2 = {40, 93, 30, 55, 60, 65};
         int[] speeds2 = {60, 1, 30, 5 , 10, 7};
@@ -99,7 +104,7 @@ public class Solution {
     }
 
     private static void runStackQueue3() {
-        stackQueue03 stackQueue03 = new stackQueue03();
+        StackQueue03 stackQueue03 = new StackQueue03();
 
         int[] priorities = {2, 1, 3, 2};
         int location = 2;
@@ -114,7 +119,7 @@ public class Solution {
     }
 
     private static void runStackQueue2() {
-        stackQueue02 stackQueue02 = new stackQueue02();
+        StackQueue02 stackQueue02 = new StackQueue02();
 
         int bridge_length = 2;
         int weight = 10;
@@ -124,7 +129,7 @@ public class Solution {
     }
 
     private static void runStackQueue() {
-        stackQueue01 stackQueue01 = new stackQueue01();
+        StackQueue01 stackQueue01 = new StackQueue01();
         String arrangement = "()(((()())(())()))(())";
 
         System.out.println("StackQueue01 testcase 1");
@@ -147,7 +152,7 @@ public class Solution {
 //    }
 
     private static void runHash01() {
-        hash01 hash01 = new hash01();
+        Hash01 hash01 = new Hash01();
 
         System.out.println("Hash01 testcase 1");
         String[] participant = {"leo", "kiki", "eden", "leo"};
@@ -156,7 +161,7 @@ public class Solution {
     }
 
     private static void runHash02() {
-        hash02 hash02 = new hash02();
+        Hash02 hash02 = new Hash02();
 
         System.out.println("Hash02 testcase 1");
         String[] phone_book = {"119", "97674223", "1195524421"};
@@ -168,7 +173,7 @@ public class Solution {
     }
 
     private static void runHash03() {
-        hash03 hash03 = new hash03();
+        Hash03 hash03 = new Hash03();
 
         System.out.println("Hash03 testcase 1");
         String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
@@ -183,7 +188,7 @@ public class Solution {
 
 
     private static void runHash04() {
-        hash04 hash04 = new hash04();
+        Hash04 hash04 = new Hash04();
 
         System.out.println("Hash04 testcase 2");
         String[] genre = {"classic", "pop", "classic", "classic", "pop"};

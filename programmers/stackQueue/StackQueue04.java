@@ -3,7 +3,7 @@ package programmers.stackQueue;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class stackQueue04 {
+public class StackQueue04 {
     public int[] solution(int[] progresses, int[] speeds) {
 
         Stack progressStack = new Stack();

@@ -2,7 +2,7 @@ package programmers.heap;
 
 import java.util.PriorityQueue;
 
-public class heap01 {
+public class Heap01 {
     public int solution(int[] scoville, int K) {
         int answer = 0;
 
