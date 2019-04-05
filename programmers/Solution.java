@@ -10,7 +10,15 @@ public class Solution {
 //        runHeap1();
 //        runHeap2();
 //        runSorting1();
-        runSorting2();
+//        runSorting2();
+        runSorting3();
+    }
+
+    private static void runSorting3() {
+        sorting03 sorting03=new sorting03();
+        int[] citation={22,42};
+        System.out.println("Sorting03 testcase1");
+        System.out.println(sorting03.solution(citation));
     }
 
     private static void runSorting2() {
@@ -19,7 +27,7 @@ public class Solution {
         System.out.println("Sorting02 testcase1");
         System.out.println(sorting02.solution(numbers));
         int [] numbers2={0,22};
-        System.out.println("Sorting02 testcase1");
+        System.out.println("Sorting02 testcase2");
         System.out.println(sorting02.solution(numbers2));
     }
 
