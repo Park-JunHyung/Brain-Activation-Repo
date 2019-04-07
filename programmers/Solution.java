@@ -8,7 +8,15 @@ import programmers.fullSearch.*;
 
 public class Solution {
     public static void main(String[] args) {
-        runFullSearch1();
+//        runFullSearch1();
+        runFullSearch2();
+    }
+
+    private static void runFullSearch2() {
+        FullSearch02 fullSearch02=new FullSearch02();
+        String numbers="1234";
+        System.out.println("Full Search02 testcase2");
+        System.out.println(fullSearch02.solution(numbers));
     }
 
     private static void runFullSearch1() {
