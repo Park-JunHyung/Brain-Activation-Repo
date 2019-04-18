@@ -1,64 +1,54 @@
 package programmers.fullSearch;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class FullSearch02 {
     public int solution(String numbers) {
         int answer = 0;
-        int n=numbers.length();
-        int max = 1<<n;
-        int[] permList;
-        ArrayList<Integer> answerList= new ArrayList();
-        for(int i=1;i<max;i++){
-            String stringNumber="";
-            for(int j=0;j<n;j++){
-                int tmp=i&(1<<j);
-                if(tmp!=0)
-                    stringNumber+=numbers.charAt(j);
-            }
-            int targetNumber=Integer.valueOf(stringNumber);
-            String newTargetString=String.valueOf(targetNumber);
-            permList=new int[newTargetString.length()];
-            for (int x=0;x<newTargetString.length();x++){
-                permList[x]=newTargetString.charAt(x);
-            }
-            permutation(permList,0,newTargetString.length(),newTargetString.length());
-            System.out.println(stringNumber);
-            if (answerList.contains(targetNumber))
-                continue;
-            else {
-                boolean isFraction=true;
-                for (int x=2;x<targetNumber;x++){
-                    if (targetNumber%x==0){
-                        isFraction=false;
-                        break;
-                    }
-                }
-                if (isFraction)
-                    answerList.add(targetNumber);
-            }
+        HashSet<Integer> numberSet=new HashSet<>();
+        String [] numbersArray= numbers.split("");
+        for (int i=1;i<=numbersArray.length;i++){
+            perm(numbersArray,0,numbersArray.length,i,numberSet);
         }
+        for (Iterator<Integer> it = numberSet.iterator(); it.hasNext(); ) {
+            Integer targetNumber = it.next();
+            if (targetNumber<2) continue;
+            for (int i=2; i<targetNumber; i++){
 
+            }
+
+        }
         return answer;
     }
 
-    static void permutation(int[] arr, int depth, int n, int r) {
-        if(depth == r) {
-            System.out.print(arr[r]);
+    public static void perm(String[] arr, int depth, int n, int k, HashSet set) {
+        if (depth == k) {
+//            System.out.println(print(arr, k));
+            set.add(print(arr, k));
             return;
         }
-
-        for(int i=depth; i<n; i++) {
-            swap(arr, depth, i);
-            permutation(arr, depth + 1, n, r);
-            swap(arr, depth, i);
+        for (int i = depth; i < n; i++) {
+            swap(arr, i, depth);
+            perm(arr, depth + 1, n, k,set);
+            swap(arr, i, depth);
         }
     }
 
-    static void swap(int[] arr, int depth, int i) {
-        int temp = arr[depth];
-        arr[depth] = arr[i];
-        arr[i] = temp;
+    public static void swap(String[] arr, int i, int j) {
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static int print(String[] arr, int k) {
+        String tmp="";
+        for (int i = 0; i < k; i++) {
+            tmp+=arr[i];
+        }
+        return Integer.parseInt(tmp);
     }
 
 

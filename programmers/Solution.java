@@ -14,7 +14,7 @@ public class Solution {
 
     private static void runFullSearch2() {
         FullSearch02 fullSearch02=new FullSearch02();
-        String numbers="1234";
+        String numbers="0101011";
         System.out.println("Full Search02 testcase2");
         System.out.println(fullSearch02.solution(numbers));
     }
