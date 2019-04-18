@@ -9,8 +9,17 @@ import programmers.fullSearch.*;
 public class Solution {
     public static void main(String[] args) {
 //        runFullSearch1();
-        runFullSearch2();
+//        runFullSearch2();
+        runFullSearch3();
     }
+
+    private static void runFullSearch3() {
+        FullSearch03 fullSearch03=new FullSearch03();
+        int[][] baseball= {{123, 1, 1}, {356, 1, 0}, {327, 2, 0}, {489, 0, 1}};
+        System.out.println("Full Search03 testcase1");
+        System.out.println(fullSearch03.solution(baseball));
+    }
+
 
     private static void runFullSearch2() {
         FullSearch02 fullSearch02=new FullSearch02();
