@@ -22,7 +22,12 @@ public class FullSearch03 {
 
             switch (strike) {
                 case 0: {
-
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if ((tmp.charAt(0) != first && tmp.charAt(1) != second && tmp.charAt(2) != third))
+                            possibleSet.add(tmp);
+                    }
+                    break;
                 }
                 case 1: {
                     for (Iterator it = set.iterator(); it.hasNext(); ) {
@@ -32,12 +37,13 @@ public class FullSearch03 {
                                 || (tmp.charAt(0) != first && tmp.charAt(1) != second && tmp.charAt(2) == third && tmp.indexOf(third) == tmp.lastIndexOf(third)))
                             possibleSet.add(tmp);
                     }
-                    set= (HashSet) possibleSet.clone();
+                    break;
                 }
                 case 2: {
 
                 }
             }
+            set= (HashSet) possibleSet.clone();
         }
 
 
