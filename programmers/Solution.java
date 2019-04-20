@@ -16,7 +16,7 @@ public class Solution {
     private static void runFullSearch3() {
         FullSearch03 fullSearch03=new FullSearch03();
 //        int[][] baseball= {{123, 1, 1}, {356, 1, 0}, {327, 2, 0}, {489, 0, 1}};
-        int[][] baseball= {{123, 0, 1}, {356, 1, 0}};
+        int[][] baseball= {{123, 0, 0}, {356, 2, 0}};
         System.out.println("Full Search03 testcase1");
         System.out.println(fullSearch03.solution(baseball));
     }

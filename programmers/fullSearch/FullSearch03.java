@@ -40,10 +40,44 @@ public class FullSearch03 {
                     break;
                 }
                 case 2: {
-
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if ((tmp.charAt(0) == first && tmp.charAt(1) == second)
+                                || (tmp.charAt(1) == second && tmp.charAt(2) == third)
+                                || (tmp.charAt(0) == first && tmp.charAt(2) == third))
+                            possibleSet.add(tmp);
+                    }
+                    break;
+                }
+                case 3:
+                    return 1;
+            }
+            set = (HashSet) possibleSet.clone();
+            possibleSet=new HashSet();
+            switch (ball){
+                case 0:{
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if ((tmp.charAt(0)!=second&&tmp.charAt(0)!=third)
+                                &&(tmp.charAt(1)!=first&&tmp.charAt(1)!=third)
+                                &&(tmp.charAt(2)!=first&&tmp.charAt(2)!=second))
+                            possibleSet.add(tmp);
+                    }
+                    break;
+                }
+                case 1:{
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if ((tmp.charAt(1)==first||tmp.charAt(2)==first&&tmp.indexOf(first) == tmp.lastIndexOf(first))
+                                ||(tmp.charAt(0)==second||tmp.charAt(2)==second&&tmp.indexOf(second) == tmp.lastIndexOf(second))
+                                ||(tmp.charAt(0)==third||tmp.charAt(1)==third&&tmp.indexOf(third) == tmp.lastIndexOf(third)))
+                            possibleSet.add(tmp);
+                    }
+                    break;
                 }
             }
-            set= (HashSet) possibleSet.clone();
+            set = (HashSet) possibleSet.clone();
+
         }
 
 
