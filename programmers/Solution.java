@@ -10,7 +10,15 @@ public class Solution {
     public static void main(String[] args) {
 //        runFullSearch1();
 //        runFullSearch2();
-        runFullSearch3();
+//        runFullSearch3();
+        runFullSearch04();
+    }
+
+    private static void runFullSearch04() {
+        FullSearch04 fullSearch04=new FullSearch04();
+        int brown=10,red=2;
+        System.out.println("Full Search04 testcase1");
+        System.out.println(fullSearch04.solution(brown,red));
     }
 
     private static void runFullSearch3() {
