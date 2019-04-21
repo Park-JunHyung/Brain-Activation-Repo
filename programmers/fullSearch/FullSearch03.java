@@ -5,10 +5,12 @@ import java.util.Iterator;
 
 public class FullSearch03 {
     public int solution(int[][] baseball) {
-        int answer = 0;
+
         HashSet set = new HashSet();
         for (int x = 100; x < 1000; x++) {
-            set.add(String.valueOf(x));
+            String tmp = String.valueOf(x);
+            if (tmp.charAt(0) != tmp.charAt(1) && tmp.charAt(1) != tmp.charAt(2) && tmp.charAt(0) != tmp.charAt(2) && !tmp.contains("0"))
+                set.add(String.valueOf(x));
         }
 
         for (int i = 0; i < baseball.length; i++) {
@@ -53,27 +55,51 @@ public class FullSearch03 {
                     return 1;
             }
             set = (HashSet) possibleSet.clone();
-            possibleSet=new HashSet();
-            switch (ball){
-                case 0:{
+            possibleSet = new HashSet();
+            switch (ball) {
+                case 0: {
                     for (Iterator it = set.iterator(); it.hasNext(); ) {
                         String tmp = String.valueOf(it.next());
-                        if ((tmp.charAt(0)!=second&&tmp.charAt(0)!=third)
-                                &&(tmp.charAt(1)!=first&&tmp.charAt(1)!=third)
-                                &&(tmp.charAt(2)!=first&&tmp.charAt(2)!=second))
+                        if ((tmp.charAt(0) != second && tmp.charAt(0) != third)
+                                && (tmp.charAt(1) != first && tmp.charAt(1) != third)
+                                && (tmp.charAt(2) != first && tmp.charAt(2) != second))
                             possibleSet.add(tmp);
                     }
                     break;
                 }
-                case 1:{
+                case 1: {
                     for (Iterator it = set.iterator(); it.hasNext(); ) {
                         String tmp = String.valueOf(it.next());
-                        if ((tmp.charAt(1)==first||tmp.charAt(2)==first&&tmp.indexOf(first) == tmp.lastIndexOf(first))
-                                ||(tmp.charAt(0)==second||tmp.charAt(2)==second&&tmp.indexOf(second) == tmp.lastIndexOf(second))
-                                ||(tmp.charAt(0)==third||tmp.charAt(1)==third&&tmp.indexOf(third) == tmp.lastIndexOf(third)))
+                        if (((tmp.charAt(0) == second || tmp.charAt(0) == third) && (tmp.charAt(1) != first && tmp.charAt(1) != third) && (tmp.charAt(2) != first && tmp.charAt(2) != second))
+                                || ((tmp.charAt(0) != second && tmp.charAt(0) != third) && (tmp.charAt(1) == first || tmp.charAt(1) == third) && (tmp.charAt(2) != first && tmp.charAt(2) != second))
+                                || ((tmp.charAt(0) != second && tmp.charAt(0) != third) && (tmp.charAt(1) != first && tmp.charAt(1) != third) && (tmp.charAt(2) == first || tmp.charAt(2) == second)))
                             possibleSet.add(tmp);
                     }
                     break;
+                }
+                case 2: {
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if (tmp.charAt(0) == second && tmp.charAt(1) == first
+                                || tmp.charAt(0) == second && tmp.charAt(1) == third && tmp.charAt(2) != first
+                                || tmp.charAt(0) == third && tmp.charAt(1) == first && tmp.charAt(2) != second
+                                || tmp.charAt(1) == first && tmp.charAt(2) == second && tmp.charAt(0) != third
+                                || tmp.charAt(1) == third && tmp.charAt(2) == first && tmp.charAt(0) != second
+                                || tmp.charAt(1) == third && tmp.charAt(2) == second
+                                || tmp.charAt(0) == second && tmp.charAt(2) == first && tmp.charAt(1) != third
+                                || tmp.charAt(0) == third && tmp.charAt(2) == first
+                                || tmp.charAt(0) == third && tmp.charAt(2) == second && tmp.charAt(1) != first)
+                            possibleSet.add(tmp);
+                    }
+                    break;
+                }
+                case 3: {
+                    for (Iterator it = set.iterator(); it.hasNext(); ) {
+                        String tmp = String.valueOf(it.next());
+                        if ((tmp.charAt(0) == second && tmp.charAt(1) == third && tmp.charAt(2) == first)
+                                || (tmp.charAt(0) == third && tmp.charAt(1) == first && tmp.charAt(2) == second))
+                            possibleSet.add(tmp);
+                    }
                 }
             }
             set = (HashSet) possibleSet.clone();
@@ -81,6 +107,6 @@ public class FullSearch03 {
         }
 
 
-        return answer;
+        return set.size();
     }
 }
