@@ -5,13 +5,30 @@ import programmers.stackQueue.*;
 import programmers.heap.*;
 import programmers.sorting.*;
 import programmers.fullSearch.*;
+import programmers.etc.*;
 
 public class Solution {
     public static void main(String[] args) {
 //        runFullSearch1();
 //        runFullSearch2();
 //        runFullSearch3();
-        runFullSearch04();
+//        runFullSearch04();
+        runWordChain();
+    }
+
+    private static void runWordChain() {
+        WordChain wordChain=new WordChain();
+        int n=3;
+        String[] words={"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
+        System.out.println("WordChain testcase");
+        System.out.println(wordChain.solution(n,words));
+
+
+        WordChain wordChain2=new WordChain();
+        int n2=5;
+        String[] words2={"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"};
+        System.out.println("WordChain testcase2");
+        System.out.println(wordChain.solution(n2,words2));
     }
 
     private static void runFullSearch04() {
