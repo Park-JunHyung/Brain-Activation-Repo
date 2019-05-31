@@ -13,7 +13,15 @@ public class Solution {
 //        runFullSearch2();
 //        runFullSearch3();
 //        runFullSearch04();
-        runWordChain();
+//        runWordChain();
+        runPairDelete();
+    }
+
+    private static void runPairDelete() {
+        PairDelete pairDelete=new PairDelete();
+        String n ="aaa";
+        System.out.println("PairDelete testcase");
+        System.out.println(pairDelete.solution(n));
     }
 
     private static void runWordChain() {
